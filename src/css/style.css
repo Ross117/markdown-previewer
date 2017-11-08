@@ -5,3 +5,15 @@ body {
   margin: 0;
   padding: 30px;
 }
+
+h1 {
+  margin: 10px;
+}
+
+.markdown-field {
+  display: inline-block;
+}
+
+.html-field {
+  display: inline-block;
+}

@@ -12,12 +12,11 @@ class App extends Component {
     this.state = {
       convertedMarkdown: ""
     };
-
   }
 
   convertMarkdown(inputText) {
     const convertedMarkdown = Marked(inputText);
-    
+
     this.setState({convertedMarkdown});
   }
 
@@ -25,8 +24,9 @@ class App extends Component {
     const convertMarkdown = this.convertMarkdown.bind(this);
 
     return (
-      // <h1>Markdown Previewer</h1>
-      <div>
+      <div className="row">
+        <h1>Markdown Previewer</h1>
+        <br />
         <MarkdownField onUserInput={convertMarkdown} />
         <HTMLPreview textDisplay={this.state.convertedMarkdown} />
       </div>

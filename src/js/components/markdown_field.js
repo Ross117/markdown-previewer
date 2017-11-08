@@ -5,24 +5,27 @@ class MarkdownField extends Component {
     super(props);
 
     this.state = {
-      inputText: ""
+      inputText: "Type some Markdown and see it converted to HTML!"
     };
-  }
-
-  render () {
-    return (
-      <div className="markdown-field">
-        <input
-          value={this.state.inputText}
-          onChange={event => this.onInputChange(event.target.value)} />
-      </div>
-    );
   }
 
   onInputChange(inputText) {
     this.setState({inputText});
     this.props.onUserInput(inputText);
   }
+
+  render () {
+    return (
+      <div className="markdown-field col-md-6">
+        <textarea
+          cols="45"
+          rows="20"
+          value={this.state.inputText}
+          onChange={event => this.onInputChange(event.target.value)} />
+      </div>
+    );
+  }
+
 }
 
 export default MarkdownField;
