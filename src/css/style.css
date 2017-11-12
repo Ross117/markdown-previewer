@@ -6,8 +6,12 @@ body {
   padding: 30px;
 }
 
-h1 {
-  margin: 10px;
+.heading {
+  margin-left: 10px;
+}
+
+.heading p {
+  font-style: italic;
 }
 
 .markdown-field {

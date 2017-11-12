@@ -5,7 +5,7 @@ class MarkdownField extends Component {
     super(props);
 
     this.state = {
-      inputText: "Type some Markdown and see it converted to HTML!"
+      inputText: ""
     };
   }
 
@@ -18,7 +18,7 @@ class MarkdownField extends Component {
     return (
       <div className="markdown-field col-md-6">
         <textarea
-          cols="45"
+          cols="60"
           rows="20"
           value={this.state.inputText}
           onChange={event => this.onInputChange(event.target.value)} />
