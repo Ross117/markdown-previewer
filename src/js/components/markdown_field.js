@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 class MarkdownField extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       inputText: props.exampleText
     };
-
   }
 
   onInputChange(inputText) {
