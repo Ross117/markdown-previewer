@@ -28,7 +28,7 @@ class App extends Component {
         <div className="heading">
           <h1>Markdown Previewer</h1>
           <p>Type some Markdown into the box below and see it converted to HTML on the opposite side!</p>
-          <p>Want to learn more about Markdown? <a href="https://en.wikipedia.org/wiki/Markdown">Click here</a>.</p>
+          <p>Want to learn more about Markdown? <a href="https://en.wikipedia.org/wiki/Markdown">Click here for the Wikipedia article</a>.</p>
         </div>
         <MarkdownField onUserInput={convertMarkdown} />
         <HTMLPreview textDisplay={this.state.convertedMarkdown} />
@@ -38,5 +38,3 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.querySelector('.app'));
-
-// link to explanation of what markdown is?
