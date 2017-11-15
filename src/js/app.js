@@ -12,7 +12,7 @@ const getExampleText = () => {
     '### Another deeper heading \n \n' +
     'Paragraphs are separated \n' +
      'by a blank line. \n \n' +
-    'Two spaces at the end of a line leave a \n' +
+    'Two spaces at the end of a line leave a  \n' +
     'line break. \n \n' +
     'Text attributes _italic_, *italic*, \n' +
     '__bold__, **bold**, `monospace`. \n \n' +
@@ -36,7 +36,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      convertedMarkdown: Marked(getExampleText())
+      convertedMarkdown: Marked(getExampleText ())
     };
   }
 
@@ -53,7 +53,7 @@ class App extends Component {
       <div className="row">
         <div className="heading">
           <h1>Markdown Previewer</h1>
-          <p>Type some Markdown into the box below and see it converted to HTML on the opposite side!</p>
+          <p>Type some Markdown into the box below, and see it converted to HTML on the opposite side!</p>
           <p>Want to learn more about Markdown? <a href="https://en.wikipedia.org/wiki/Markdown">Click here for the Wikipedia article</a>. Example text provided by Wikipedia.</p>
         </div>
         <MarkdownField onUserInput={convertMarkdown} exampleText={getExampleText ()} />
