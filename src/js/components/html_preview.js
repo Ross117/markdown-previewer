@@ -6,7 +6,6 @@ const HTMLPreview = (props) => {
     return {__html: props.textDisplay};
   };
 
-  // alternative to dangerouslySetInnerHTML?
   return (
     <div className="html-field col-md-6" dangerouslySetInnerHTML={addPreview()} />
   );
