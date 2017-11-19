@@ -6,27 +6,35 @@ import Marked from 'marked';
 import '../css/style.css';
 
 const getExampleText = () => {
-  // examples provided by Wikipedia
-  const exampleText = '# Heading \n \n' +
-    '## Sub-heading \n \n' +
-    '### Another deeper heading \n \n' +
-    'Paragraphs are separated \n' +
-     'by a blank line. \n \n' +
-    'Two spaces at the end of a line leave a  \n' +
-    'line break. \n \n' +
-    'Text attributes _italic_, *italic*, \n' +
-    '__bold__, **bold**, `monospace`. \n \n' +
-    'Horizontal rule: \n \n' +
-    '--- \n \n' +
-    'Bullet list: \n \n' +
-    '* apples \n' +
-    '* oranges \n' +
-    '* pears \n \n' +
-    'Numbered list: \n \n' +
-    '1. apples \n' +
-    '2. oranges \n' +
-    '3. pears \n \n' +
-    'A [link](http://example.com).';
+  // examples provided by Wikipedia (https://en.wikipedia.org/wiki/Markdown)
+  const exampleText = `# Heading
+## Sub-heading
+### Another deeper heading
+
+Paragraphs are separated
+by a blank line.
+
+Two spaces at the end of a line leave a  
+line break.
+
+Text attributes _italic_, *italic*,
+__bold__, **bold**,` + '`monospace`.' + `
+
+Horizontal rule:
+
+---
+
+Bullet list:
+* apples
+* oranges
+* pears
+
+Numbered list:
+1. apples
+2. oranges
+3. pears
+
+A [link](http://example.com).`;
 
     return exampleText;
 };
