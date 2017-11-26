@@ -14,11 +14,11 @@ const getExampleText = () => {
 Paragraphs are separated
 by a blank line.
 
-Two spaces at the end of a line leave a  
+Two spaces at the end of a line leave a
 line break.
 
 Text attributes _italic_, *italic*,
-__bold__, **bold**,` + '`monospace`.' + `
+__bold__, **bold**,` + ' `monospace`.' + `
 
 Horizontal rule:
 
@@ -44,12 +44,12 @@ class App extends Component {
     super(props);
 
     this.state = {
-      convertedMarkdown: Marked(getExampleText ())
+      convertedMarkdown: Marked(getExampleText (), {santize: true})
     };
   }
 
   convertMarkdown(inputText) {
-    const convertedMarkdown = Marked(inputText);
+    const convertedMarkdown = Marked(inputText, {santize: true});
 
     this.setState({convertedMarkdown});
   }
